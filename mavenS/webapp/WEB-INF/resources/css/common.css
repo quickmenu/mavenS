@@ -1,0 +1,279 @@
+body {
+	font-family: 'Malgun Gothic';
+	text-align: justify;
+}
+
+#container {
+	width:80%;
+	margin:auto !important;
+	overflow: hidden;
+}
+
+/* 모바일 웹 메뉴 */
+.item { width: 30%; padding:5px;}
+.banner { width: 14%;}
+#content { width: 60.8%; }
+
+@media (min-width: 768px) {
+	#mobile {
+		display: none;
+	}
+
+	.ui-bar-a {
+		background-color: transparent !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.item { width: 100%; padding:5px 0px; }	
+	#content { width: 100%; }
+
+	.kwicks {
+		display: none;
+	}
+
+	.login {
+		display: none;
+	}
+
+	.ui-bar-a {
+		background-color: #E8D9FF !important;
+	}
+}
+
+.ui-header, .ui-footer {
+	border-style: none !important;
+	border-top: none !important;
+}
+
+#mobile {
+	margin-left:10px;
+	position: fixed;
+	right:10px;
+	top:0px;
+	z-index: 100;
+}
+
+
+/* jQuery Mobile 커스텀 */
+.ui-page-theme-a .ui-bar-inherit {
+	background-color: rgba(119,17,131,.3);
+}
+
+.ui-page-theme-a .ui-btn {
+	background-color:transparent !important;
+}
+
+.ui-page-theme-a .ui-btn.ui-btn-active {
+	border-color: transparent !important;
+}
+
+.ui-page-theme-a .ui-btn:focus, html .ui-bar-a .ui-btn:focus, html .ui-body-a .ui-btn:focus, html body .ui-group-theme-a .ui-btn:focus, html head + body .ui-btn-a.ui-btn:focus, .ui-page-theme-a .ui-focus, html .ui-bar-a .ui-focus, html .ui-body-a .ui-focus, html body .ui-group-theme-a .ui-focus, html head + body .ui-focus.ui-btn-a, html head + body .ui-focus.ui-body-a {
+	box-shadow: none !important;
+}
+
+.ui-listview>li>a.ui-btn {
+	border-left-style: solid;
+	border-left-width: 5px;
+	border-left-color: rgba(119,17,131,.3);
+	height:30px;
+	line-height:30px;
+	font-family: 'Malgun Gothic' !important;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+	background-color:transparent !important;
+	text-shadow:none !important;
+}
+
+.ui-panel-display-reveal {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui-panel-page-content-position-left {
+	 width: 20%;
+    -webkit-box-shadow: -3px 0px 3px rgba(0,0,0,.15);
+    -moz-box-shadow: -3px 0px 3px rgba(0,0,0,.15);
+    box-shadow: -3px 0px 3px rgba(0,0,0,.15);
+}
+
+/* Listview with collapsible list items. */
+.ui-listview > li .ui-collapsible-heading {
+	margin: 0;
+}
+.ui-collapsible.ui-li-static {
+	padding: 0;
+	border: none !important;
+}
+.ui-collapsible + .ui-collapsible > .ui-collapsible-heading > .ui-btn {
+	border-top: none !important;
+}
+
+.ui-collapsible-heading>.ui-btn {
+	padding:0;
+}
+
+#custom-border-radius .ui-btn-icon-notext.ui-corner-all {
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: white !important;
+    border-color:transparent;
+}
+
+.custom-corners .ui-bar {
+	text-shadow:none;
+	background-color: #E8D9FF !important;
+	-webkit-border-top-left-radius: inherit;
+	border-top-left-radius: inherit;
+	-webkit-border-top-right-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+.custom-corners .ui-body {
+	border-top-width: 0;
+	-webkit-border-bottom-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	-webkit-border-bottom-right-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+
+/* 웹 상단메뉴 */
+.logo {
+	/*background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 125px;*/
+	text-align: center;
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	top:0px;
+	left:10px;
+	margin: 0;
+	padding: 0 0 0 5px;
+}
+
+.logo h1 {
+	margin:0;
+	padding:0;
+	text-align: inherit;
+}
+
+.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+	background-color: rgba(119,17,131,.3) !important;
+}
+
+
+.login {
+	position: absolute;
+	top:60px;
+	right:25px;
+}
+
+.kwicks {
+	/* recommended styles for kwicks ul container */
+	list-style: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.kwicks li{
+	/* these are required, but the values are up to you (must be pixel) */
+	width: 125px;
+	height: 50px;
+	text-align: center;
+
+	/*do not change these */
+	display: block;
+	overflow: hidden;
+	padding: 0;  /* if you need padding, do so with an inner div (or implement your own box-model hack) */
+}
+
+.kwicks.horizontal li {
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-right: 5px; /*Set to same as spacing option. */
+	float: left;
+	background-color: #D1B2FF;
+	line-height: 50px;
+	text-shadow:none;
+	color:white;
+}
+
+.kwicks.horizontal li:hover {
+	background-color: #B5B2FF;
+}
+
+.kwicks.vertical li{
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-bottom: 5px; /*Set to same as spacing option. */	
+}
+
+.kwicks.horizontal #kwick_4 {
+	margin-right: none; /* cancel margin on last kiwck (if you set a margin above) */
+}
+
+.kwicks.vertical #kwick_4 {
+	margin-bottom: none; /* cancel margin on last kiwck (if you set a margin above) */
+}
+
+#kwick_1 {
+	background-color: #D1B2FF;
+}
+
+#kwick_2 {
+	background-color: #BFA0ED;
+}
+
+#kwick_3 {
+	background-color: #AD8EDB;
+}
+
+#kwick_4 {
+	background-color: #9B7CC9;
+}
+
+#kwick_5 {
+	background-color: #896AB7;
+}
+
+
+
+/* 하단 배너 */
+#banner1{
+	height:200px;
+	background-image: url('../img/test1.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% 100%;
+}
+
+#banner2{
+	height:200px;
+	background-image: url('../img/test2.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% 100%;
+}
+
+#banner3{
+	height:200px;
+	background-image: url('../img/test3.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% 100%;
+}
+
+#banner4{
+	height:200px;
+	background-image: url('../img/test4.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% 100%;
+}
