@@ -111,7 +111,7 @@
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
 					<div class="ui-bar ui-bar-a">
-					<h3>PCë°© ì ì ì¨</h3>
+					<h3>PC방 점유율</h3>
 					</div>
 					<div id="piechart" class="ui-body ui-body-a" style="height:300px;">
 					</div>
@@ -133,8 +133,6 @@
 						4위를 차지한 피파온라인3(7.9%)는 넥슨이 국내 서비스를 맡고 있지만 EA스포츠가 개발한 외산 게임이다.</p>
 						</div>
 					</div>
-					
-					
 				</div>
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
@@ -170,6 +168,40 @@
 				</div>
 				<div class="item banner">
 					<div id="banner4" class="ui-body ui-body-a ui-corner-all"></div>
+				</div>
+				
+				<div class="item">
+					<div class="ui-corner-all custom-corners">
+					<div class="ui-bar ui-bar-a">
+					<h3>Company Performance</h3>
+					</div>
+					<div id="linechart" class="ui-body ui-body-a" style="height:300px;">
+					</div>
+					</div>
+				</div>
+				
+				<div id="content" class="item">
+					<div data-role="tabs" id="tabs">
+						<div data-role="navbar">
+							<ul>
+								<li><a href="#one" data-ajax="false">one</a></li>
+								<li><a href="#two" data-ajax="false">two</a></li>
+								<li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li>
+							</ul>
+						</div>
+						<div id="one" class="ui-body-d ui-content">
+							<ul data-role="listview" data-inset="true">
+								<li><a href="#">Acura</a></li>
+								<li><a href="#">Audi</a></li>
+								<li><a href="#">BMW</a></li>
+								<li><a href="#">Cadillac</a></li>
+								<li><a href="#">Ferrari</a></li>
+							</ul>
+						</div>
+						<div id="two">
+							<h1>First tab contents</h1>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div><!-- /content -->
