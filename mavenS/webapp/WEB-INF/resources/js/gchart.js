@@ -48,8 +48,8 @@ function drawMChart() {
 
 // 선형 차트
 google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart);
-function drawChart() {
+google.setOnLoadCallback(drawLChart);
+function drawLChart() {
   var data = google.visualization.arrayToDataTable([
     ['Year', 'Sales', 'Expenses'],
     ['2004',  1000,      400],
@@ -59,10 +59,55 @@ function drawChart() {
   ]);
 
   var options = {
-		  
+	title: 'Company Performance'
   };
 
   var chart = new google.visualization.LineChart(document.getElementById('linechart'));
 
+  chart.draw(data, options);
+}
+
+// 막대 차트
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawCChart);
+function drawCChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'Sales', 'Expenses'],
+    ['2004',  1000,      400],
+    ['2005',  1170,      460],
+    ['2006',  660,       1120],
+    ['2007',  1030,      540]
+  ]);
+
+  var options = {
+    title: 'Company Performance',
+    hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+
+  chart.draw(data, options);
+}
+
+// 영역 차트
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawAChart);
+function drawAChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'Sales', 'Expenses'],
+    ['2013',  1000,      400],
+    ['2014',  1170,      460],
+    ['2015',  660,       1120],
+    ['2016',  1030,      540]
+  ]);
+
+  var options = {
+    title: 'Company Performance',
+    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+    vAxis: {minValue: 0}
+  };
+
+  var chart = new google.visualization.AreaChart(document.getElementById('areachart'));
   chart.draw(data, options);
 }

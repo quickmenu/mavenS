@@ -44,6 +44,19 @@
 			$( "#nav-panel" ).panel( "close" );
 			drawPChart();
 			drawMChart();
+			drawLChart();
+			drawCChart();
+			drawAChart();
+		});
+		
+		$(document).delegate('[data-role="tabs"] a', 'vclick', function () {
+			if($(this).attr("id") == 'l-chart') {
+				drawLChart();
+			} else if($(this).attr("id") == 'c-chart') {
+				drawCChart();
+			} else if($(this).attr("id") == 'a-chart') {
+				drawAChart();
+			}
 		});
 	</script>
 
@@ -120,7 +133,7 @@
 				<div id="content" class="item">
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
-						<h3>'규제지옥'에 국산 온라인 PC게임 '시들시들'</h3>
+						<h3 style="font-size:1.2em">'규제지옥'에 국산 온라인 PC게임 '시들시들'</h3>
 						</div>
 						<div class="ui-body ui-body-a">
 						<p>라이엇게임즈의 리그오브레전드(League Of Legend, 이하 LOL)가 국내 온라인 게임 인기순위 1위를 90주째(게임트릭스 17일 순위 기준) 지키고 있는 가운데 국내 게임사들이 이 시장에서 맥을 추지 못하고 있는 것으로 나타났다.
@@ -134,6 +147,30 @@
 						</div>
 					</div>
 				</div>
+				
+				<div id="content" class="item">
+					<div class="ui-body ui-body-a ui-corner-all" style="padding:0">
+						<div data-role="tabs" id="tabs" style="padding:0">
+							<div data-role="navbar">
+								<ul>
+									<li><a href="#lchart" id="l-chart" data-ajax="false" class="ui-btn-active" style="border-top-color:white; border-left-color:white;">Line Chart</a></li>
+									<li><a href="#cchart" id="c-chart" data-ajax="false" style="border-top-color:white;">Column Chart</a></li>
+									<li><a href="#achart" id="a-chart" data-ajax="false" style="border-top-color:white; border-right-color:white;">Area Chart</a></li>
+								</ul>
+							</div>
+							<div id="lchart" class="ui-body-d ui-content" style="padding:0;">
+								<div id="linechart" class="ui-body ui-body-a"></div>
+							</div>
+							<div id="cchart">
+								<div id="columnchart" class="ui-body ui-body-a"></div>
+							</div>
+							<div id="achart">
+								<div id="areachart" class="ui-body ui-body-a"></div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /tab -->
+				
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
@@ -168,40 +205,6 @@
 				</div>
 				<div class="item banner">
 					<div id="banner4" class="ui-body ui-body-a ui-corner-all"></div>
-				</div>
-				
-				<div class="item">
-					<div class="ui-corner-all custom-corners">
-					<div class="ui-bar ui-bar-a">
-					<h3>Company Performance</h3>
-					</div>
-					<div id="linechart" class="ui-body ui-body-a" style="height:300px;">
-					</div>
-					</div>
-				</div>
-				
-				<div id="content" class="item">
-					<div data-role="tabs" id="tabs">
-						<div data-role="navbar">
-							<ul>
-								<li><a href="#one" data-ajax="false">one</a></li>
-								<li><a href="#two" data-ajax="false">two</a></li>
-								<li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li>
-							</ul>
-						</div>
-						<div id="one" class="ui-body-d ui-content">
-							<ul data-role="listview" data-inset="true">
-								<li><a href="#">Acura</a></li>
-								<li><a href="#">Audi</a></li>
-								<li><a href="#">BMW</a></li>
-								<li><a href="#">Cadillac</a></li>
-								<li><a href="#">Ferrari</a></li>
-							</ul>
-						</div>
-						<div id="two">
-							<h1>First tab contents</h1>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div><!-- /content -->

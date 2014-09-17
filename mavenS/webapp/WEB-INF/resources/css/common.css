@@ -9,6 +9,12 @@ body {
 	overflow: hidden;
 }
 
+/* 차트 커스텀 */
+#linechart, #columnchart, #areachart {
+	border:none !important;
+}
+
+
 /* 모바일 웹 메뉴 */
 .item { width: 30%; padding:5px;}
 .banner { width: 14%;}
@@ -22,11 +28,19 @@ body {
 	.ui-bar-a {
 		background-color: transparent !important;
 	}
+	
+	#linechart, #columnchart, #areachart {
+		height:400px;
+	}
 }
 
 @media (max-width: 768px) {
 	.item { width: 100%; padding:5px 0px; }	
 	#content { width: 100%; }
+	
+	#linechart, #columnchart, #areachart {
+		height:300px;
+	}
 
 	.kwicks {
 		display: none;
@@ -66,6 +80,8 @@ body {
 
 .ui-page-theme-a .ui-btn.ui-btn-active {
 	border-color: transparent !important;
+	background-color: red !important;
+	text-shadow: none !important;
 }
 
 .ui-page-theme-a .ui-btn:focus, html .ui-bar-a .ui-btn:focus, html .ui-body-a .ui-btn:focus, html body .ui-group-theme-a .ui-btn:focus, html head + body .ui-btn-a.ui-btn:focus, .ui-page-theme-a .ui-focus, html .ui-bar-a .ui-focus, html .ui-body-a .ui-focus, html body .ui-group-theme-a .ui-focus, html head + body .ui-focus.ui-btn-a, html head + body .ui-focus.ui-body-a {
