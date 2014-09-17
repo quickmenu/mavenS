@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c"      uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,6 +79,20 @@
 
 <body>
 	<div data-role="page">
+	
+		<form:form id="sampleVo" name="sampleVo" method="post">		     
+		    <table border="1">
+		        <tr>
+		            <th>ID</th>
+		            <td><input name="title" size="50" value="${list[0].id}" /></td>
+		        </tr>
+		        <tr>
+		            <th>Name</th>
+		            <td><input name="description" size="50" value="${list[0].name}" /></td>
+		        </tr>
+		    </table>
+		</form:form>
+	
 		<!-- panel -->
 		<div data-role="panel" id="nav-panel" data-position="left" data-display="overlay">
 		    <ul data-role="listview">
