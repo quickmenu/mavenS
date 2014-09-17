@@ -61,7 +61,7 @@
 			}
 		});
 	</script>
-
+	
 	<!-- google chart -->
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script src="<c:url value="/resources/js/gchart.js" />"></script>
@@ -79,25 +79,12 @@
 
 <body>
 	<div data-role="page">
-	
-		<form:form id="sampleVo" name="sampleVo" method="post">		     
-		    <table border="1">
-		        <tr>
-		            <th>ID</th>
-		            <td><input name="title" size="50" value="${list[0].id}" /></td>
-		        </tr>
-		        <tr>
-		            <th>Name</th>
-		            <td><input name="description" size="50" value="${list[0].name}" /></td>
-		        </tr>
-		    </table>
-		</form:form>
-	
+		
 		<!-- panel -->
 		<div data-role="panel" id="nav-panel" data-position="left" data-display="overlay">
 		    <ul data-role="listview">
 		    	<li data-role="collapsible" data-inset="false" data-iconpos="right">
-	              <h3><a class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all" style="text-align:left; margin:0px; border:none;">TEST USER</a></h3>
+	              <h3><a class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all" style="text-align:left; margin:0px; border:none;">${list[0].name}</a></h3>
 	              <ul data-role="listview">
 	                <li data-icon="action"><a href="#" style="padding:5px 15px;">로그아웃</a></li>
 	                <li data-icon="edit"><a href="#" style="padding:5px 15px;">정보수정</a></li>
@@ -130,12 +117,13 @@
 				<li id="kwick_5" onClick="javascript:link('#');">NONE</li>
 			</ul>
 			<div class="login">
-				<a class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all">TEST USER</a>
+				<a class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all">${list[0].name}</a>
 			</div>
 		</div>
 
 		<!-- content -->
-		<div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
+		
 			<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 10, "itemSelector": ".item" }'>
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
@@ -157,7 +145,7 @@
 						LOL이 32.45%로 여전히 압도적 1위를 지켰고 최근 확장팩인 ‘영혼을 거두는 자’를 출시하며 또 한 번 바람몰이에 나선 블리자드의 디아블로3가 14.29%로 2위를 차지해 외국 게임이 선두권을 확고히 굳히고 있다. LOL과 디아블로3만으로도 온라인 PC게임 시장의 절반 가까이를 차지하고 있는 셈이다.
 						국내 온라인게임시장이 각종 규제 및 비판에 직면하며 생기를 잃어가는 반면 세계를 제패하고 있는 '수입산' 게임들이 시장을 점령하고 있는 것.
 						인기순위 '톱10' 가운데 국산 게임이 5개를 차지했지만 순위가 주로 뒤쪽에 몰려 있다. 
-						순수 국산 게임 중에서는 3위로 떨어진 넥슨GT의 FPS 서든어택이 9.32%, 엔씨소프트의 MMORPG 3총사 아이온, 블레이드&소울, 리니지가 5,6,8위에 올랐다.
+						순수 국산 게임 중에서는 3위로 떨어진 넥슨GT의 FPS 서든어택이 9.32%, 엔씨소프트의 MMORPG 3총사 아이온, 블소, 리니지가 5,6,8위에 올랐다.
 						넥슨(대표 박지원)과 엔씨소프트(대표 김택진)를 제외하면 10위권에 이름을 올린 국내 게임업체가 전무한 상황이다.
 						4위를 차지한 피파온라인3(7.9%)는 넥슨이 국내 서비스를 맡고 있지만 EA스포츠가 개발한 외산 게임이다.</p>
 						</div>
@@ -224,7 +212,6 @@
 				</div>
 			</div>
 		</div><!-- /content -->
-
 	</div><!-- page -->
 </body>
 </html>

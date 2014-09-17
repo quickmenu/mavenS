@@ -7,8 +7,10 @@
     </resultMap>
  
     <select id="getAll" resultMap="studyMap">
-        SELECT  id
+        SELECT  email
+               ,password
                ,name
-        FROM   hello
+               ,member_type
+        FROM   study
     </select>
 </mapper>
