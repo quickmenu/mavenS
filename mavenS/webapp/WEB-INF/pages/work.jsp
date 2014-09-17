@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/jquery.mobile-1.4.3.min.css" />" />
 	<script src="<c:url value="/resources/js/jquery-2.1.1.min.js" />"></script>
 	<script src="<c:url value="/resources/js/jquery.mobile-1.4.3.min.js" />"></script>
-
+	
 	<!-- IMPORTANT!!! Include the stylesheet *BEFORE* the JavaScript (necessary for Safari 3.1.1) -->
 	<script src="<c:url value="/resources/js/jquery.easing.1.3.js" />" type="text/javascript"></script>
 	<script src="<c:url value="/resources/js/jquery.kwicks-1.5.1.pack.js" />" type="text/javascript"></script>
@@ -105,7 +105,6 @@
     			<a id="mobile" href="#nav-panel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" href="#">Panel</a>
 			</div>
 
-
 			<div class="logo">
 				<h1><font color="#771183">NMP</font></h1>
 			</div>
@@ -116,8 +115,9 @@
 				<li id="kwick_4" onClick="javascript:link('#');">NONE</li>
 				<li id="kwick_5" onClick="javascript:link('#');">NONE</li>
 			</ul>
+			
 			<div class="login">
-				<a class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all">${list[0].name}</a>
+				<a href="#" data-dropdown="#dropdown-1" class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all">${list[0].name}</a>
 			</div>
 		</div>
 
