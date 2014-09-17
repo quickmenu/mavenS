@@ -101,23 +101,20 @@
 
 		<!-- header -->
 		<div data-role="header" data-theme="a" style="height:50px;">
-			<div id="custom-border-radius">
-    			<a id="mobile" href="#nav-panel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" href="#">Panel</a>
-			</div>
-
-			<div class="logo">
-				<h1><font color="#771183">NMP</font></h1>
-			</div>
-		    <ul class="kwicks horizontal">
-				<li id="kwick_1" onClick="javascript:link('#');">HOME</li>
-				<li id="kwick_2" onClick="javascript:link('http://demos.jquerymobile.com/1.4.4/');">jQuery Mobile</li>
-				<li id="kwick_3" onClick="javascript:link('#');">NONE</li>
-				<li id="kwick_4" onClick="javascript:link('#');">NONE</li>
-				<li id="kwick_5" onClick="javascript:link('#');">NONE</li>
-			</ul>
-			
-			<div class="login">
-				<a href="#" data-dropdown="#dropdown-1" class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all">${list[0].name}</a>
+			<div id="header_wrapper">
+				<div id="custom-border-radius">
+	    			<a id="mobile" href="#nav-panel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" href="#">Panel</a>
+				</div>
+	
+				<div class="logo">
+					<h1><font color="#771183">NMP</font></h1>
+				</div>
+			    
+				
+				<div class="login">
+					<a href="#" data-dropdown="#dropdown-1" class="ui-btn ui-icon-user ui-btn-icon-left ui-corner-all">${list[0].name}</a>
+					<br>
+				</div>
 			</div>
 		</div>
 
@@ -125,6 +122,15 @@
 		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
 		
 			<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 10, "itemSelector": ".item" }'>
+				<div id="nav" class="item">
+					<ul class="kwicks horizontal">
+						<li id="kwick_1" onClick="javascript:link('#');">HOME</li>
+						<li id="kwick_2" onClick="javascript:link('http://demos.jquerymobile.com/1.4.4/');">jQuery Mobile</li>
+						<li id="kwick_3" onClick="javascript:link('#');">NONE</li>
+						<li id="kwick_4" onClick="javascript:link('#');">NONE</li>
+						<li id="kwick_5" onClick="javascript:link('#');">NONE</li>
+					</ul>
+				</div>
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
 					<div class="ui-bar ui-bar-a">
@@ -178,17 +184,25 @@
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
-						<h3>1위. 리그 오브 레전드</h3>
+						<h3>리스트 검색</h3>
 						</div>
 						<div class="ui-body ui-body-a">
-						<p>《리그 오브 레전드》(League of Legends, LoL)는 라이엇 게임즈에서 제작, 서비스하는 멀티플레이어 온라인 배틀 아레나 게임이다. 워크래프트 3의 유즈맵 DotA(Defense of the Ancients)를 바탕으로 만들어졌으며, 2009년 10월 27일 부터 정식 서비스를 시작하였다. 제작자는 도타 올스타즈의 역대 제작자들 중 한명이었던 프로그래머 구인수(Guinsoo)이다.</p>
+						<p>
+<!-- 						《리그 오브 레전드》(League of Legends, LoL)는 라이엇 게임즈에서 제작, 서비스하는 멀티플레이어 온라인 배틀 아레나 게임이다. 워크래프트 3의 유즈맵 DotA(Defense of the Ancients)를 바탕으로 만들어졌으며, 2009년 10월 27일 부터 정식 서비스를 시작하였다. 제작자는 도타 올스타즈의 역대 제작자들 중 한명이었던 프로그래머 구인수(Guinsoo)이다. -->
+						<ul data-role="listview" data-filter="true" data-filter-placeholder="Find charts..." data-filter-theme="a" data-inset="true">
+						    <li>Line Chart</li>
+						    <li>Column Chart</li>
+						    <li>Area Chart</li>
+						    <li>Pie Chart</li>
+						</ul>
+						</p>
 						</div>
 					</div>
 				</div>
 				<div class="item">
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
-						<h3>2위. 디아블로 III</h3>
+						<h3>디아블로 III</h3>
 						</div>
 						<div class="ui-body ui-body-a">
 						<p>《디아블로 III》(Diablo III) 는 미국 블리자드 엔터테인먼트가 개발한 다크 판타지/호러 액션 롤플레잉 게임으로, 디아블로 시리즈의 세 번째 에피소드를 담고 있다. 이 게임은 논리적 사고나 문제 해결보다는 투쟁과 폭력을 주요 게임 진행 도구로 삼아 암흑 세계에서 전투를 펼쳐나가는 구조이다. 디아블로 III은 2008년 6월 28일 프랑스 파리 시에서 열린 월드와이드 인비테이셔널 행사에서 공식 발표되었으나, 그 전부터 공식 홈페이지에 티저 광고를 걸어 팬들을 기대감에 휩싸이게 했었다.[5] 2012년 5월 15일에 북아메리카, 남아메리카, 유럽, 아시아 일부 지역[6] 에 발매되었다. 러시아 지역의 발매는 2012년 6월 7일 이루어질 예정이다[7] . 대한민국에서는 2012년 3월 15일 오후 10시부터 디지털 상품의 예약 판매를 시작했으며, 2012년 5월 14일전야제와 함께 패키지 상품 판매를 시작하였으며,4000개의 한정 소장판 판매소식에 5000명의 게이머들이 모여들어 패키지 판매 장소인 왕십리역 인근 판매점 앞에서 텐트를 치고 노숙을 마다하지 않는 등,12년의 기다림 끝에 게이머의 품으로 돌아온 디아블로 3의 발매 소식에 게이머들은 뜨거운 반응을 나타냈다. 2012년 5월 15일 정식으로 발매하였다. 2012년 6월 1일, 블리자드 엔터테인먼트의 발표에 따르면, 아시아 서버의 최고 동시접속자 수는 64만 명이고, 그 중 43만 명은 한국 플레이어라고 하였다. 한편, 뜨거운 시장반응과 함께 빈번한 서버접속 불안 현상, 불법 프로그램 사용이 의심되는 계정에 대한 일방적인 게임 계정 압류 등으로 인해 게이머의 불만을 양산하고 있는 등 시장 잡음도 끊이지 않고 이어지고 있다.</p>

@@ -19,8 +19,9 @@ body {
 .item { width: 30%; padding:5px;}
 .banner { width: 14%;}
 #content { width: 60.8%; }
+#nav { width: 60.8%; height:50px; }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
 	#mobile {
 		display: none;
 	}
@@ -34,7 +35,7 @@ body {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.item { width: 100%; padding:5px 0px; }	
 	#content { width: 100%; }
 	
@@ -42,17 +43,21 @@ body {
 		height:300px;
 	}
 
-	.kwicks {
+	#nav, .kwicks {
 		display: none;
 	}
 
-	.login {
+	.login, .search {
 		display: none;
 	}
 
 	.ui-bar-a {
 		background-color: #E8D9FF !important;
 	}
+}
+
+@media (max-width: 1300px) {
+	#nav { width: 90%; height:50px; }
 }
 
 .ui-header, .ui-footer {
@@ -70,6 +75,11 @@ body {
 
 
 /* jQuery Mobile 커스텀 */
+.controlgroup-textinput{
+    padding-top:.22em;
+    padding-bottom:.22em;
+}
+
 .ui-page-theme-a .ui-bar-inherit {
 	background-color: rgba(119,17,131,.3);
 }
@@ -168,7 +178,7 @@ body {
 	height: 50px;
 	position: absolute;
 	top:0px;
-	left:10px;
+	left:9.5%;
 	margin: 0;
 	padding: 0 0 0 5px;
 }
@@ -183,11 +193,10 @@ body {
 	background-color: rgba(119,17,131,.3) !important;
 }
 
-
 .login {
 	position: absolute;
-	top:60px;
-	right:25px;
+	top:0px;
+	right:17%;
 }
 
 .kwicks {
@@ -195,8 +204,9 @@ body {
 	list-style: none;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	margin: 0;
+	margin-left: 5px;
 	padding: 0;
 }
 
