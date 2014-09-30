@@ -11,26 +11,27 @@ import org.springframework.stereotype.Service;
 
 @Service(value = "studySvc")
 public class StudySvc {
-	@Resource(name = "studySvcImpl")
-	private StudyMapper studySvcImpl;
+	
+	@Resource(name = "studyMapper")
+	private StudyMapper studyMapper;
 	
 	public List<StudyDto> getAll() {
-		return this.studySvcImpl.getAll();
+		return this.studyMapper.getAll();
 	}
 	
 	public StudyDto get(int studyNo) {
-		return this.studySvcImpl.get(studyNo);
+		return this.studyMapper.get(studyNo);
 	}
 	
 	public void add(StudyDto studyDto) {
-		this.studySvcImpl.add(studyDto);
+		this.studyMapper.add(studyDto);
 	}
 	
 	public void update(StudyDto studyDto) {
-		this.studySvcImpl.update(studyDto);
+		this.studyMapper.update(studyDto);
 	}
 	
 	public void delete(int studyNo) {
-		this.studySvcImpl.delete(studyNo);
+		this.studyMapper.delete(studyNo);
 	}
 }

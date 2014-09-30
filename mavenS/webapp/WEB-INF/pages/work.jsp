@@ -39,17 +39,35 @@
 					columnWidth: 10,
 					itemSelector: '.item'
 				});
+				setWidth();
 			});
 		});
 
-		$( window ).resize(function() {
+		$(window).resize(function() {
 			$( "#nav-panel" ).panel( "close" );
 			drawPChart();
 			drawMChart();
 			drawLChart();
 			drawCChart();
 			drawAChart();
+			setWidth();
 		});
+		
+		function setWidth() {
+			var Cwidth = $("div#nav").width();			
+			$(".kwicks").css({'width':Cwidth+'px'});
+			$(".kwicks li").css({'width':19.9+'%'});
+
+			$('.kwicks').kwicks({
+				max : 200,
+				spacing : 1
+			});
+			
+			jQuery('#container').masonry({
+				columnWidth: 10,
+				itemSelector: '.item'
+			});
+		}
 		
 		$(document).delegate('[data-role="tabs"] a', 'vclick', function () {
 			if($(this).attr("id") == 'l-chart') {
@@ -187,15 +205,12 @@
 						<h3>리스트 검색</h3>
 						</div>
 						<div class="ui-body ui-body-a">
-						<p>
-<!-- 						《리그 오브 레전드》(League of Legends, LoL)는 라이엇 게임즈에서 제작, 서비스하는 멀티플레이어 온라인 배틀 아레나 게임이다. 워크래프트 3의 유즈맵 DotA(Defense of the Ancients)를 바탕으로 만들어졌으며, 2009년 10월 27일 부터 정식 서비스를 시작하였다. 제작자는 도타 올스타즈의 역대 제작자들 중 한명이었던 프로그래머 구인수(Guinsoo)이다. -->
 						<ul data-role="listview" data-filter="true" data-filter-placeholder="Find charts..." data-filter-theme="a" data-inset="true">
 						    <li>Line Chart</li>
 						    <li>Column Chart</li>
 						    <li>Area Chart</li>
 						    <li>Pie Chart</li>
 						</ul>
-						</p>
 						</div>
 					</div>
 				</div>

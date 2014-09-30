@@ -4,7 +4,7 @@ import java.util.List;
 import kr.co.study.domain.StudyDto;
 import org.springframework.stereotype.Repository;
 
-@Repository(value = "studySvcImpl")
+@Repository(value = "studyMapper")
 public interface StudyMapper {
 	List<StudyDto> getAll();
 	

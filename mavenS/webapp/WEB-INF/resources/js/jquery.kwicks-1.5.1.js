@@ -151,6 +151,7 @@
 						duration: o.duration,
 						easing: o.easing
 					});
+
 				});
 			}
 		});
